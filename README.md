@@ -4,8 +4,13 @@
 
 ```javascript
 npx create-react-app my-app
-cd my-app
-npm start
+```
 
+```javascript
+cd my-app
+```
+
+```javascript
+npm start
 ```
 
