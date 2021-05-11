@@ -13,4 +13,8 @@ cd my-app
 ```javascript
 npm start
 ```
+**Install react and react-redux**
+```javascript
+npm install redux react-redux
+```
 
