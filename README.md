@@ -69,8 +69,46 @@ export default cartReducers;
 ```
 
 
+**Create Store**
+Let's create store on redux > store folder. Bellow code for our demo project's redux store.
+Go to redux > store > cartStore.js and insert this code.
+
+```javascript
+import { createStore } from "redux";
+import cartReducers from "../reducers/cartReducers";
+
+export const cartStore = createStore(cartReducers)
+```
+
+**Set Provider and pass store**
+
+Let's set redux provider on react root file called index.js or we can also use it on app.js
+Go to root index.js > set provider like bellow code.
+
+```javascript
+  <Provider store={cartStore}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+```
+
+**Connect Component with redux**
+
+Now we have to connect components with redux state and actions. Let's see how to do it.
+Insert bellow code on bottom of your Components where you want to use redux.
 
 
+```javascript
+ const mapStateToProps = (state) => {
+    return { cart: state.cart }
+}
 
+const mapDispatchToProps = {
+    addToCart: addToCart
+}
+
+connect(mapStateToProps, mapDispatchToProps)(Shop);
+```
 
 
